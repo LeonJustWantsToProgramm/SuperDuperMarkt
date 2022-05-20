@@ -31,7 +31,7 @@ namespace SuperDuperMarkt
             // Change the username, password and database according to your needs
             // You can ignore the database option if you want to access all of them.
             // 127.0.0.1 stands for localhost and the default port to connect.
-            string connectionString = "datasource=;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=  db5007810181.hosting-data.io;port=3306;username=dbu1670119;password=rk3Zz3L1234;database=db5007810181;";
             // Your query,
             string query = "SELECT * FROM user";
 
