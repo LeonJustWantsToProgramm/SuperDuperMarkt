@@ -33,7 +33,7 @@ namespace SuperDuperMarkt
             // 127.0.0.1 stands for localhost and the default port to connect.
             string connectionString = "datasource=  db5007810181.hosting-data.io;port=3306;username=dbu1670119;password=rk3Zz3L1234;database=dbs6470968;";
             // Your query,
-            string query = "SELECT * FROM user";
+            string query = "SELECT Name FROM Produkt";
 
             // Prepare the connection
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
