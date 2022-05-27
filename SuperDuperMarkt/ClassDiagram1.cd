@@ -10,7 +10,7 @@
   <Class Name="SuperDuperMarkt.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="9" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -25,6 +25,27 @@
     <Position X="9" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperDuperMarkt.Bestellung">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bestellung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperDuperMarkt.Kunde">
+    <Position X="1.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAAAAAAAAAAAAAACACAAACAAAAQAAAABA=</HashCode>
+      <FileName>Kunde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperDuperMarkt.Produkt">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Produkt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

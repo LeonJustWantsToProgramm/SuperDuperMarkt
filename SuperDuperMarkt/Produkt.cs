@@ -9,8 +9,9 @@ namespace SuperDuperMarkt
 {
     class Produkt
     {
-        static int produktID;
-        double preis;
+        private string produktName;
+        private double preis;
+        private string produktBeschreibung;
 
         public Produkt()
         {

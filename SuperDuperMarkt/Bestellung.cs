@@ -8,13 +8,14 @@ namespace SuperDuperMarkt
 {
     class Bestellung
     {
-        private int bestellungID;
         private double gesamtPreis;
-        private Customer customer;
+        private string bestellDatum;
+        private Kunde kunde;
+        private List<Produkt> produktList;
 
         public Bestellung()
         {
-            bestellungID;
+            
         }
     }
 }

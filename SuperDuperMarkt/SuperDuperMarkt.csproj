@@ -87,7 +87,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bestellung.cs" />
-    <Compile Include="Customer.cs" />
+    <Compile Include="Kunde.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -121,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\ic_local_grocery_store_128_28460.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
