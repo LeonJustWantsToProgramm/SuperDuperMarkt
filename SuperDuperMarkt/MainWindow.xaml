@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperDuperMarkt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Icon="/Bilder/ic_local_grocery_store_128_28460.png">
     <Grid>
-        <Image Source="/Bilder/ic_local_grocery_store_128_28460.png" Margin="160,18,573,337"/>
+        <Image Source="/Bilder/ic_local_grocery_store_128_28460.png" HorizontalAlignment="Left" MinHeight="60" MinWidth="60" Margin="180,30,560,347" Width="50"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,36,0,0" TextWrapping="Wrap" Text="Super-Duper-Markt" FontSize="32" VerticalAlignment="Top"/>
-        <Button Content="Kunden erstellen" FontSize="24" HorizontalAlignment="Left" Margin="46,348,0,0" VerticalAlignment="Top" Click="Button_Click" />
-        <Button Content="Bestellung aufgeben" FontSize="24" HorizontalAlignment="Center" Margin="0,348,0,0" VerticalAlignment="Top"/>
-        <Button Content="Produkt suchen" FontSize="24" HorizontalAlignment="Left" Margin="578,348,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="KundenErstBtn" Content="Kunden erstellen" FontSize="20" HorizontalAlignment="Left" Margin="70,348,0,0" Padding="10" VerticalAlignment="Top" Click="KundenErstBtn_Click"/>
+        <Button x:Name="BestellungAufgBtn" Content="Bestellung aufgeben" FontSize="20" HorizontalAlignment="Left" Margin="296,348,0,0" Padding="10" VerticalAlignment="Top" Click="BestellungAufgBtn_Click"/>
+        <Button x:Name="ProduktSuchenBtn" Content="Produkt suchen" FontSize="20" Margin="571,348,70,0" Padding="10" VerticalAlignment="Top" Click="ProduktSuchenBtn_Click"/>
 
     </Grid>
 </Window>

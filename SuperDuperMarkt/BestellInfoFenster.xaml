@@ -1,0 +1,18 @@
+﻿<Window x:Class="SuperDuperMarkt.BestellInfoFenster"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuperDuperMarkt"
+        mc:Ignorable="d"
+        Title="BestellInfoFenster" Height="450" Width="800" Icon="/Bilder/ic_local_grocery_store_128_28460.png">
+    <Grid>
+        <Button x:Name="BestellungAufgebenBtn" Content="Bestellung aufgeben" HorizontalAlignment="Left" Margin="635,0,0,25" VerticalAlignment="Bottom" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Cursor="Hand" Height="48" Width="140" FontSize="14"/>
+        <Button x:Name="VerwerfenBtn" Content="Verwerfen" Margin="460,0,200,25" Background="Coral" Cursor="Hand" FontSize="14" Height="48" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="BestellInfoContent" HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="300" FontSize="14" Text="Hier alle Produkte einfügen!"/>
+        <Label x:Name="BestellLabel" Content="Ihre Bestellung:" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+        <Label x:Name="PreisangabeLabel" Content="Gesamtpreis:" HorizontalAlignment="Left" Margin="30,371,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+        <Label x:Name="GesamtPreisLabel" Content="Hier später den Gesamtpreis einsetzen!" HorizontalAlignment="Left" Margin="125,371,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+
+    </Grid>
+</Window>

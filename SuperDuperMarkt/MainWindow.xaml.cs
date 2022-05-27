@@ -28,9 +28,8 @@ namespace SuperDuperMarkt
 
         public void CreateDatabaseConnection()
         {
-
+            // contains data that is needed for the database connection
             string connectionString = "server=db5007810181.hosting-data.io;uid=dbu1670119;pwd=rk3Zz3L1234;database=dbs6470968;";
-            // Your query,
             string query = "SELECT Name FROM Produkt";
 
             // Prepare the connection
@@ -40,19 +39,12 @@ namespace SuperDuperMarkt
             commandDatabase.CommandTimeout = 60;
             MySqlDataReader reader;
 
-            // Let's do it !
             try
             {
-                // Open the database
-                
 
                 // Execute the query
                 reader = commandDatabase.ExecuteReader();
 
-                // All succesfully executed, now do something
-
-                // IMPORTANT : 
-                // If your query returns result, use the following processor :
 
                 if (reader.HasRows)
                 {
@@ -68,19 +60,31 @@ namespace SuperDuperMarkt
                     Console.WriteLine("No rows found.");
                 }
 
-                // Finally close the connection
+                // closes the connection
                 databaseConnection.Close();
             }
             catch (Exception ex)
             {
-                // Show any error message.
+                // Shows any error message.
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+        private void ProduktSuchenBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KundenErstBtn_Click(object sender, RoutedEventArgs e)
         {
             CreateDatabaseConnection();
+        }
+
+        private void BestellungAufgBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
