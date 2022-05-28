@@ -24,6 +24,7 @@ namespace SuperDuperMarkt
             InitializeComponent();
             tbxKunde.Text = contentFromLastWindow;
         }
+        private List<Produkt> Warenkorb = new List<Produkt>();
         Produkt produkt = new Produkt();
         Kunde kunde = new Kunde();
         string Artikelnummer;
@@ -46,7 +47,13 @@ namespace SuperDuperMarkt
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Warenkorb.Add(this.produkt);
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            BestellInfoFenster bstIF = new BestellInfoFenster(Warenkorb.ToArray);
+            bstIF.Show();
         }
     }
 }

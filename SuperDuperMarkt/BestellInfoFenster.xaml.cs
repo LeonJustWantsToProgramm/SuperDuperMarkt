@@ -19,9 +19,13 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class BestellInfoFenster : Window
     {
-        public BestellInfoFenster()
+        List<Produkt> Warenkorb = new List<Produkt>();
+        Array a;
+
+        public BestellInfoFenster(Array r)
         {
             InitializeComponent();
         }
+
     }
 }
