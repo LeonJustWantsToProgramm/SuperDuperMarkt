@@ -52,7 +52,7 @@ namespace SuperDuperMarkt
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            BestellInfoFenster bstIF = new BestellInfoFenster(Warenkorb.ToArray);
+            BestellInfoFenster bstIF = new BestellInfoFenster(Warenkorb.ToArray());
             bstIF.Show();
         }
     }
