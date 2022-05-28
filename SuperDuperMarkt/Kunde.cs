@@ -43,5 +43,32 @@ namespace SuperDuperMarkt
             var content = new FormUrlEncodedContent(values);
             var response = await client.PostAsync("https://mysmartnutrition.de/v1/addKunde.php", content);
         }
+
+        public async void getKundenInformations(string Email)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "Email", Email }
+            };
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("https://mysmartnutrition.de/v1/getKunde.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+            string str1 = responseString.Replace(",", "");
+            string str2 = str1.Replace(":", "");
+            string str3 = str2.Replace("\"", ":");
+            string[] a = str3.Split(':');
+
+            string Kunden_ID = a[4];
+            string Kunden_Nachname = a[7];
+            string Kunden_Vorname = a[10];
+            string Kunden_Strasse = a[13];
+            string Kunden_Hausnummer = a[16];
+            string Kunden_PLZ = a[19];
+            string Kunden_Ort = a[22];
+            string Kunden_Email = a[25];
+            string Kunden_Passwort = a[28];
+
+            
+        }
     }
 }
