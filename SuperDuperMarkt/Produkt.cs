@@ -11,6 +11,8 @@ namespace SuperDuperMarkt
     class Produkt
     {
         private static readonly HttpClient client = new HttpClient();
+
+        public string produktID { get; set; }
         public string produktName { get; set; }
         public double preis { get; set; }
         public string produktBeschr { get; set; }
@@ -21,6 +23,11 @@ namespace SuperDuperMarkt
             this.preis = preis;
             this.produktBeschr = produktBeschr;
             addProdukt(produktName, Convert.ToString(preis), produktBeschr);
+        }
+
+        public Produkt()
+        {
+
         }
 
 
@@ -50,7 +57,7 @@ namespace SuperDuperMarkt
             int result = Convert.ToInt32(a[2].Replace("}", ""));
         }
 
-        public async void getProduktInformations(string P_ID)
+        public async Task getProduktInformations(string P_ID)
         {
             var values = new Dictionary<string, string>
             {
@@ -64,10 +71,10 @@ namespace SuperDuperMarkt
             string str3 = str2.Replace("\"", ":");
             string[] a = str3.Split(':');
 
-            string Produkt_ID = a[4];
-            string Produkt_Name = a[7];
-            string Produkt_Preis = a[10];
-            string Produkt_Beschreibung = a[13];
+            this.produktID = a[4];
+            this.produktName = a[7];
+            this.preis = Convert.ToDouble(a[10].Replace(".", ","));
+            this.produktBeschr = a[13];
         }
     }
 }

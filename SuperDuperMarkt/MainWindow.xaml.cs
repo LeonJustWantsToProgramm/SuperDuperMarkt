@@ -26,13 +26,6 @@ namespace SuperDuperMarkt
         }
 
 
-
-
-        private void ProduktSuchenBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void KundenErstBtn_Click(object sender, RoutedEventArgs e)
         {
             // CreateDatabaseConnection();

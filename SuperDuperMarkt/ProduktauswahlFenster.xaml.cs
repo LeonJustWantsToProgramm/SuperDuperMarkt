@@ -23,5 +23,30 @@ namespace SuperDuperMarkt
         {
             InitializeComponent();
         }
+        Produkt produkt = new Produkt();
+        Kunde kunde = new Kunde();
+        string Artikelnummer;
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Artikelnummer = tbxArtikelnummer.Text;
+                await produkt.getProduktInformations(Artikelnummer);
+
+                P_Name.Text = produkt.produktName;
+                P_Preis.Text = Convert.ToString(produkt.preis);
+                P_Beschreibung.Text = produkt.produktBeschr;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Dieses Produkt existiert nicht");
+            }
+            tbxKunde.Text = kunde.e_Mail;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,12 @@ namespace SuperDuperMarkt
             this.bestellDatum = bestellDatum;
             this.kunde = kunde;
             this.produktList = produktList;
-            // addBestellung(gesamtPreis, ); // Hier später KundenID, und IDs von den Produkten hinzufügen
+            string produktIDs = "";
+            foreach(Produkt p in produktList)
+            {
+                produktIDs += p.produktID;
+            }
+            addBestellung(Convert.ToString(gesamtPreis), kunde.KundenID, produktIDs);
         }
 
         public async void addBestellung(string Gesamtpreis, string Customer_ID, string Produkte_ID)
