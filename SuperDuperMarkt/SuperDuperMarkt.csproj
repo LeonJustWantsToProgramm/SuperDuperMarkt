@@ -108,7 +108,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MethodenVorlagen.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

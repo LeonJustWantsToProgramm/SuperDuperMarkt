@@ -79,7 +79,10 @@ namespace SuperDuperMarkt
 
         private void KundenErstBtn_Click(object sender, RoutedEventArgs e)
         {
-            CreateDatabaseConnection();
+            // CreateDatabaseConnection();
+            KundenErstellen kundenErstellenObj = new KundenErstellen();
+            // this.Visibility = Visibility.Hidden;     // hides the current window
+            kundenErstellenObj.Show();
         }
 
         private void BestellungAufgBtn_Click(object sender, RoutedEventArgs e)

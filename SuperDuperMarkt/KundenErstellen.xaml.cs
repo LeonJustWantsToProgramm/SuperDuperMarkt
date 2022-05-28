@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,34 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class KundenErstellen : Window
     {
+        Kunde kunde;
+
+        private static readonly Regex _regex = new Regex("[^0-9.-]+");
+
         public KundenErstellen()
         {
             InitializeComponent();
+        }
+
+
+        private void BestätigenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                kunde = new Kunde(VornameTBox.Text, NachnameTBox.Text, Convert.ToInt32(PLZTBox.Text), OrtTBox.Text, StraßeTBox.Text, HausNrTBox.Text);
+                MessageBox.Show("Neuer Kunde wurde erstellt!");
+                this.Close();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Bitte geben Sie in jedes Textfeld einen logischen Wert ein.\n" + ex.Message);
+            }
+            
+        }
+
+        private void PLZTBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

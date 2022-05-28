@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperDuperMarkt"
         mc:Ignorable="d"
-        Title="KundenErstellen" Height="450" Width="800" Icon="/Bilder/ic_local_grocery_store_128_28460.png">
-    <Grid>
-        <Label Content="Kundeninformationen:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Content="Vorname:" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Height="33" Width="75"/>
-        <Label Content="Nachname:" HorizontalAlignment="Left" Margin="15,92,0,0" VerticalAlignment="Top" Height="33" Width="86"/>
-        <Label Content="Straße:" HorizontalAlignment="Left" Margin="15,131,0,0" VerticalAlignment="Top" Height="33" Width="57"/>
-        <Label Content="HausNr:" HorizontalAlignment="Left" Margin="15,170,0,0" VerticalAlignment="Top" Height="33" Width="65"/>
-        <Label Content="PLZ:" HorizontalAlignment="Left" Margin="15,209,0,0" VerticalAlignment="Top" Height="33" Width="40"/>
-        <Label Content="Ort:" HorizontalAlignment="Left" Margin="15,248,0,0" VerticalAlignment="Top" Height="32" Width="37"/>
-        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="15,287,0,0" VerticalAlignment="Top" Height="32" Width="57"/>
-        <Label Content="Passwort:" HorizontalAlignment="Left" Margin="15,326,0,0" VerticalAlignment="Top" Height="32" Width="74"/>
-        <TextBox x:Name="VornameTBox" HorizontalAlignment="Left" Margin="116,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
-        <TextBox x:Name="NachnameTBox" HorizontalAlignment="Left" Margin="116,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
-        <TextBox x:Name="StraßeTBox" HorizontalAlignment="Left" Margin="116,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
-        <TextBox x:Name="HausNrTBox" HorizontalAlignment="Left" Margin="116,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
-        <TextBox x:Name="PLZTBox" HorizontalAlignment="Left" Margin="116,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
-        <TextBox x:Name="OrtTBox" HorizontalAlignment="Left" Margin="116,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
-        <TextBox x:Name="EMailTBox" HorizontalAlignment="Left" Margin="116,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
-        <TextBox x:Name="PasswortTBox" HorizontalAlignment="Left" Margin="116,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
-        <Button x:Name="BestätigenBtn" Content="Bestätigen" HorizontalAlignment="Left" Margin="148,379,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="85"/>
+        Title="KundenErstellen" Height="450" Width="301" Icon="/Bilder/ic_local_grocery_store_128_28460.png">
+    <Grid HorizontalAlignment="Center" Width="301" Height="440" VerticalAlignment="Top">
+        <Label Content="Kundeninformationen:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Vorname:" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top" Height="33" Width="75"/>
+        <Label Content="Nachname:" HorizontalAlignment="Left" Margin="15,80,0,0" VerticalAlignment="Top" Height="33" Width="86"/>
+        <Label Content="Straße:" HorizontalAlignment="Left" Margin="15,196,0,0" VerticalAlignment="Top" Height="33" Width="57"/>
+        <Label Content="HausNr:" HorizontalAlignment="Left" Margin="15,235,0,0" VerticalAlignment="Top" Height="33" Width="65"/>
+        <Label Content="PLZ:" HorizontalAlignment="Left" Margin="15,117,0,0" VerticalAlignment="Top" Height="33" Width="40"/>
+        <Label Content="Ort:" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" Height="32" Width="37"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="15,275,0,0" VerticalAlignment="Top" Height="32" Width="57"/>
+        <Label Content="Passwort:" HorizontalAlignment="Left" Margin="15,314,0,0" VerticalAlignment="Top" Height="32" Width="74"/>
+        <TextBox x:Name="VornameTBox" HorizontalAlignment="Left" Margin="116,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="NachnameTBox" HorizontalAlignment="Left" Margin="116,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="PLZTBox" HorizontalAlignment="Left" Margin="116,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22" MaxLength="5" PreviewTextInput="PLZTBox_PreviewTextInput"/>
+        <TextBox x:Name="OrtTBox" HorizontalAlignment="Left" Margin="116,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
+        <TextBox x:Name="StraßeTBox" HorizontalAlignment="Left" Margin="116,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="HausNrTBox" HorizontalAlignment="Left" Margin="116,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="EMailTBox" HorizontalAlignment="Left" Margin="116,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
+        <TextBox x:Name="PasswortTBox" HorizontalAlignment="Left" Margin="116,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22"/>
+        <Button x:Name="BestätigenBtn" Content="Bestätigen" HorizontalAlignment="Left" Margin="148,358,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="85" Click="BestätigenBtn_Click"/>
 
     </Grid>
 </Window>
