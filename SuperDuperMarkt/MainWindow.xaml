@@ -12,6 +12,7 @@
         <Button x:Name="KundenErstBtn" Content="Kunden erstellen" FontSize="20" HorizontalAlignment="Left" Margin="70,348,0,0" Padding="10" VerticalAlignment="Top" Click="KundenErstBtn_Click"/>
         <Button x:Name="BestellungAufgBtn" Content="Bestellung aufgeben" FontSize="20" HorizontalAlignment="Left" Margin="296,348,0,0" Padding="10" VerticalAlignment="Top" Click="BestellungAufgBtn_Click"/>
         <Button x:Name="ProduktSuchenBtn" Content="Produkt suchen" FontSize="20" Margin="571,348,70,0" Padding="10" VerticalAlignment="Top" Click="ProduktSuchenBtn_Click"/>
+        <Button x:Name="ProduktErstellenBtn" Content="Produkt Erstellen" FontSize="20" HorizontalAlignment="Left" Margin="524,264,0,0" Padding="10" VerticalAlignment="Top" Click="ProduktErstellenBtn_Click" Width="198"/>
 
     </Grid>
 </Window>

@@ -46,5 +46,11 @@ namespace SuperDuperMarkt
             Anmeldefenster anmeldefenster = new Anmeldefenster();
             anmeldefenster.Show();
         }
+
+        private void ProduktErstellenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ProduktErstellen produktErstellenFenster = new ProduktErstellen();
+            produktErstellenFenster.Show();
+        }
     }
 }
