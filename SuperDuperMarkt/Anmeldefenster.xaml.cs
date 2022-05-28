@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Net.Http;
 
 namespace SuperDuperMarkt
 {
@@ -19,17 +20,19 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class Anmeldefenster : Window
     {
+        private static readonly HttpClient client = new HttpClient();
+        string Kunden_Passwort;
         public Anmeldefenster()
         {
             InitializeComponent();
         }
 
-        private void AnmeldeBtn_Click(object sender, RoutedEventArgs e)
+        private async void AnmeldeBtn_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Hier Datenbankabfrage für E-Mail und Passwort machen und in einer Variable speichern
+            string Email = AnmeldeEMailTBox.Text;
+            await getKundePasswort(Email);
 
-
-            if (AnmeldeEMailTBox.Text.Equals("Hier die Variable eintragen") && AnmeldePasswortTBox.Text.Equals("Hier die andere Variable eintragen"))
+            if (AnmeldeEMailTBox.Text.Equals(Email) && AnmeldePasswortTBox.Text.Equals(Kunden_Passwort))
             {
                 ProduktauswahlFenster produktauswahlFenster = new ProduktauswahlFenster();
                 produktauswahlFenster.Show();
@@ -39,6 +42,23 @@ namespace SuperDuperMarkt
             {
                 MessageBox.Show("Anmeldung fehlgeschlagen! Vergewissern Sie sich, dass Sie die richtigen Daten eingeben");
             }
+        }
+
+        public async Task getKundePasswort(string Email)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "Email", Email }
+            };
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("https://mysmartnutrition.de/v1/getKunde.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+            string str1 = responseString.Replace(",", "");
+            string str2 = str1.Replace(":", "");
+            string str3 = str2.Replace("\"", ":");
+            string[] a = str3.Split(':');
+
+            Kunden_Passwort = a[35];
         }
     }
 }

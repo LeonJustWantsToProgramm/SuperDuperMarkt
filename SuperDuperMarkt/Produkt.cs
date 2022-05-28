@@ -26,10 +26,11 @@ namespace SuperDuperMarkt
 
         public async void addProdukt(string Name, string Preis, string Beschreibung)
         {
+            string preisS = Convert.ToString(Preis.Replace(",", "."));
             var values = new Dictionary<string, string>
             {
                 { "Name", Name },
-                { "Preis", Preis },
+                { "Preis", preisS },
                 { "Beschreibung", Beschreibung }
             };
             var content = new FormUrlEncodedContent(values);

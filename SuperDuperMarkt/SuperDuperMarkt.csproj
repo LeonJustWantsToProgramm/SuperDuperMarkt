@@ -118,11 +118,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProduktErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Produkt.cs" />
     <Compile Include="ProduktauswahlFenster.xaml.cs">
       <DependentUpon>ProduktauswahlFenster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduktErstellen.xaml.cs">
+      <DependentUpon>ProduktErstellen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
