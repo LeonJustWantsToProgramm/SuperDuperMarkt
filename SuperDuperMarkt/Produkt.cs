@@ -12,15 +12,15 @@ namespace SuperDuperMarkt
     {
         private static readonly HttpClient client = new HttpClient();
         public string produktName { get; set; }
-        public double preis { get; set; }
+        public string preis { get; set; }
         public string produktBeschr { get; set; }
 
-        public Produkt(string produktName, double preis, string produktBeschr)
+        public Produkt(string produktName, string preis, string produktBeschr)
         {
             this.produktName = produktName;
             this.preis = preis;
             this.produktBeschr = produktBeschr;
-            addProdukt(produktName, Convert.ToString(preis), produktBeschr);
+            addProdukt(produktName, preis, produktBeschr);
         }
 
 

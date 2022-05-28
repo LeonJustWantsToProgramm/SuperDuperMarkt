@@ -23,17 +23,28 @@ namespace SuperDuperMarkt
         {
             InitializeComponent();
         }
-
+        string preis;
+        Produkt produkt;
         private void BestätigenBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                string content = Convert.ToString(PreisBox.Text.Replace(",", "."));
-                double a = Convert.ToDouble(content);
+                string preis = Convert.ToString(PreisBox.Text.Replace(",", "."));
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Bitte geben Sie für den Preis einen logischen Wert ein.\n" + ex.Message);
+            }
+
+            try
+            {
+                produkt = new Produkt(NameBox.Text, preis, BeschreibungBox.Text);
+                MessageBox.Show("Neues Produkt wurde erstellt!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bitte geben Sie in jedes Textfeld einen logischen Wert ein.\n" + ex.Message);
             }
         }
     }
