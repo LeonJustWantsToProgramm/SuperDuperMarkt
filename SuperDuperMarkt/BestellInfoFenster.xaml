@@ -8,10 +8,10 @@
         Title="BestellInfoFenster" Height="450" Width="800" Icon="/Bilder/ic_local_grocery_store_128_28460.png">
     <Grid>
         <Button x:Name="BestellungAufgebenBtn" Content="Bestellung aufgeben" HorizontalAlignment="Left" Margin="635,0,0,25" VerticalAlignment="Bottom" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Cursor="Hand" Height="48" Width="140" FontSize="14"/>
-        <Button x:Name="VerwerfenBtn" Content="Verwerfen" Margin="460,0,200,25" Background="Coral" Cursor="Hand" FontSize="14" Height="48" VerticalAlignment="Bottom"/>
+        <Button x:Name="VerwerfenBtn" Content="Verwerfen" Margin="460,0,0,25" Background="Coral" Cursor="Hand" FontSize="14" Height="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="140"/>
         <TextBlock x:Name="BestellInfoContent" HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="300" FontSize="14" Text="Hier alle Produkte einfügen!"/>
-        <Label x:Name="BestellLabel" Content="Ihre Bestellung:" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
-        <Label x:Name="PreisangabeLabel" Content="Gesamtpreis:" HorizontalAlignment="Left" Margin="30,371,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+        <Label x:Name="BestellLabel" Content="Ihre Bestellung:" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="PreisangabeLabel" Content="Gesamtpreis:" HorizontalAlignment="Left" Margin="30,371,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label x:Name="GesamtPreisLabel" Content="Hier später den Gesamtpreis einsetzen!" HorizontalAlignment="Left" Margin="125,371,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
 
     </Grid>

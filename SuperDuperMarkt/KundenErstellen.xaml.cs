@@ -22,8 +22,6 @@ namespace SuperDuperMarkt
     {
         Kunde kunde;
 
-        private static readonly Regex _regex = new Regex("[^0-9.-]+");
-
         public KundenErstellen()
         {
             InitializeComponent();
@@ -34,7 +32,8 @@ namespace SuperDuperMarkt
         {
             try
             {
-                kunde = new Kunde(VornameTBox.Text, NachnameTBox.Text, Convert.ToInt32(PLZTBox.Text), OrtTBox.Text, StraßeTBox.Text, HausNrTBox.Text, EMailTBox.Text, PasswortTBox.Text);
+                kunde = new Kunde(VornameTBox.Text, NachnameTBox.Text, Convert.ToInt32(PLZTBox.Text), OrtTBox.Text, 
+                    StraßeTBox.Text, HausNrTBox.Text, EMailTBox.Text, PasswortTBox.Text);
                 MessageBox.Show("Neuer Kunde wurde erstellt!");
                 this.Close();
             } catch (Exception ex)
