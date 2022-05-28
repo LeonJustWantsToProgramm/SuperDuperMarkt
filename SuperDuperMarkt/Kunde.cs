@@ -16,9 +16,10 @@ namespace SuperDuperMarkt
         public string ort { get; set; }
         public string strasse { get; set; }
         public string hausNr { get; set; }
+        public string e_Mail { get; set; }
+        public string passwort { get; set; }
 
-        
-        public Kunde(string vorname, string nachname, int plz, string ort, string strasse, string hausNr)
+        public Kunde(string vorname, string nachname, int plz, string ort, string strasse, string hausNr, string e_Mail, string passwort)
         {
             this.vorname = vorname;
             this.nachname = nachname;
@@ -26,10 +27,12 @@ namespace SuperDuperMarkt
             this.ort = ort;
             this.strasse = strasse;
             this.hausNr = hausNr;
-            addKunde(nachname, vorname, strasse, hausNr, Convert.ToString(plz), ort);
+            this.e_Mail = e_Mail;
+            this.passwort = passwort;
+            addKunde(nachname, vorname, strasse, hausNr, Convert.ToString(plz), ort, e_Mail, passwort);
         }
 
-        public async void addKunde(string Nachname, string Vorname, string Strasse, string Hausnummer, string PLZ, string Ort)
+        public async void addKunde(string Nachname, string Vorname, string Strasse, string Hausnummer, string PLZ, string Ort, string EMail, string Passwort)
         {
             var values = new Dictionary<string, string>
             {
@@ -38,7 +41,9 @@ namespace SuperDuperMarkt
                 { "Strasse", Strasse },
                 { "Hausnummer", Hausnummer },
                 { "PLZ", PLZ },
-                { "Ort", Ort }
+                { "Ort", Ort },
+                { "EMail", EMail },
+                { "Passwort", Passwort }
             };
             var content = new FormUrlEncodedContent(values);
             var response = await client.PostAsync("https://mysmartnutrition.de/v1/addKunde.php", content);

@@ -87,7 +87,8 @@ namespace SuperDuperMarkt
 
         private void BestellungAufgBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Anmeldefenster anmeldefenster = new Anmeldefenster();
+            anmeldefenster.Show();
         }
     }
 }

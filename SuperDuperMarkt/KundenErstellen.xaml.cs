@@ -34,7 +34,7 @@ namespace SuperDuperMarkt
         {
             try
             {
-                kunde = new Kunde(VornameTBox.Text, NachnameTBox.Text, Convert.ToInt32(PLZTBox.Text), OrtTBox.Text, StraßeTBox.Text, HausNrTBox.Text);
+                kunde = new Kunde(VornameTBox.Text, NachnameTBox.Text, Convert.ToInt32(PLZTBox.Text), OrtTBox.Text, StraßeTBox.Text, HausNrTBox.Text, EMailTBox.Text, PasswortTBox.Text);
                 MessageBox.Show("Neuer Kunde wurde erstellt!");
                 this.Close();
             } catch (Exception ex)
