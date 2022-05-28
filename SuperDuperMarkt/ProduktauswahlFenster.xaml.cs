@@ -19,9 +19,10 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class ProduktauswahlFenster : Window
     {
-        public ProduktauswahlFenster()
+        public ProduktauswahlFenster(string contentFromLastWindow)
         {
             InitializeComponent();
+            tbxKunde.Text = contentFromLastWindow;
         }
         Produkt produkt = new Produkt();
         Kunde kunde = new Kunde();
@@ -41,7 +42,6 @@ namespace SuperDuperMarkt
             {
                 MessageBox.Show("Dieses Produkt existiert nicht");
             }
-            tbxKunde.Text = kunde.e_Mail;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
