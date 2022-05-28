@@ -65,15 +65,14 @@ namespace SuperDuperMarkt
 
             string Kunden_ID = a[4];
             string Kunden_Nachname = a[7];
-            string Kunden_Vorname = a[10];
-            string Kunden_Strasse = a[13];
-            string Kunden_Hausnummer = a[16];
-            string Kunden_PLZ = a[19];
-            string Kunden_Ort = a[22];
-            string Kunden_Email = a[25];
-            string Kunden_Passwort = a[28];
+            string Kunden_Vorname = a[11];
+            string Kunden_Strasse = a[15];
+            string Kunden_Hausnummer = a[19];
+            string Kunden_PLZ = a[23];
+            string Kunden_Ort = a[27];
+            string Kunden_Email = a[31];
+            string Kunden_Passwort = a[35];
 
-            
         }
     }
 }
