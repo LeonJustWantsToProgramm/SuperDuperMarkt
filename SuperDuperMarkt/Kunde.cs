@@ -45,7 +45,7 @@ namespace SuperDuperMarkt
                 { "Hausnummer", Hausnummer },
                 { "PLZ", PLZ },
                 { "Ort", Ort },
-                { "EMail", EMail },
+                { "Email", EMail },
                 { "Passwort", Passwort }
             };
             var content = new FormUrlEncodedContent(values);
