@@ -41,6 +41,7 @@ namespace SuperDuperMarkt
 
         public Kunde() { }
 
+
         /// <summary>
         ///  fügt ein Produkt zum Warenkorb hinzu
         /// </summary>

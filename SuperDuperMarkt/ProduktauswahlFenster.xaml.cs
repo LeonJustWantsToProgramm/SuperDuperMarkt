@@ -19,15 +19,16 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class ProduktauswahlFenster : Window
     {
+        private Produkt produkt = new Produkt();
+        private Kunde kunde = new Kunde();
+        private string Artikelnummer;
+
+
         public ProduktauswahlFenster(string contentFromLastWindow)
         {
             InitializeComponent();
             tbxKunde.Text = contentFromLastWindow;
         }
-
-        Produkt produkt = new Produkt();
-        Kunde kunde = new Kunde();
-        string Artikelnummer;
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +48,7 @@ namespace SuperDuperMarkt
         }
 
         /// <summary>
-        /// Fügt das Produkt zum Warenkorb des entsprechenden Kunden hinzu.
+        /// Fügt das ausgewählte Produkt zum Warenkorb des entsprechenden Kunden hinzu.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,8 +65,9 @@ namespace SuperDuperMarkt
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            BestellInfoFenster bstIF = new BestellInfoFenster(Warenkorb.ToArray());
+            BestellInfoFenster bstIF = new BestellInfoFenster(tbxKunde.Text);
             bstIF.Show();
+            this.Close();
         }
     }
 }

@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:SuperDuperMarkt"
         mc:Ignorable="d"
         Title="ProduktauswahlFenster" Height="450" Width="800">
-        <Grid>
+    <Grid>
         <Button Content="Suchen" HorizontalAlignment="Left" Margin="262,11,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBox x:Name="tbxArtikelnummer" HorizontalAlignment="Left" Height="23" Margin="105,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Artikelnummer" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top"/>
-        <Button Content="Zum Warenkorb hinzufügen" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_1"/>
+        <Button Content="Zum Warenkorb hinzufügen" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_1"/>
         <Label Content="Produktname" HorizontalAlignment="Left" Margin="24,76,0,0" VerticalAlignment="Top" Width="89"/>
         <Label Content="Produktpreis" HorizontalAlignment="Left" Margin="24,107,0,0" VerticalAlignment="Top"/>
         <Label Content="Beschreibung" HorizontalAlignment="Left" Margin="24,138,0,0" VerticalAlignment="Top"/>
@@ -19,7 +19,7 @@
         <TextBlock x:Name="P_Beschreibung" HorizontalAlignment="Left" Margin="111,143,0,0" TextWrapping="Wrap" Text="PRODUKTBESCHREIBUNG" VerticalAlignment="Top" Height="108" Width="226"/>
         <TextBlock x:Name="tbxKunde" HorizontalAlignment="Left" Margin="444,13,0,0" TextWrapping="Wrap" Text="kunde@mail.de" VerticalAlignment="Top"/>
         <Label Content="Kunde" HorizontalAlignment="Left" Margin="395,8,0,0" VerticalAlignment="Top"/>
-        <Button Content="Warenkorb aufrufen" HorizontalAlignment="Left" Margin="210,251,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_2"/>
+        <Button Content="Warenkorb aufrufen" HorizontalAlignment="Left" Margin="210,266,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_2"/>
         <Image HorizontalAlignment="Left" Margin="359,81,0,0" Width="423" Source="Bilder/angebot.png" Height="247" VerticalAlignment="Top"/>
 
     </Grid>

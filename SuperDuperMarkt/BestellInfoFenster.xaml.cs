@@ -19,13 +19,38 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class BestellInfoFenster : Window
     {
-        List<Produkt> Warenkorb = new List<Produkt>();
-        Array a;
+        private Kunde kunde = new Kunde();
 
-        public BestellInfoFenster(Array r)
+        public BestellInfoFenster(string contentFromLastWindow)
         {
             InitializeComponent();
+            tbxKunde.Text = contentFromLastWindow;
+            BestellInfoContent.ItemsSource = GetWarenkorbOfCustomer();
         }
 
+        private List<Produkt> GetWarenkorbOfCustomer()
+        {
+            List<Produkt> result = new List<Produkt>();
+
+            foreach (Kunde kunde in kunde.kundenList)
+            {
+                if (kunde.e_Mail.Equals(tbxKunde.Text))
+                {
+                    result = kunde.warenkorb;
+                }
+            }
+            return result;
+        }
+
+        private void VerwerfenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            GetWarenkorbOfCustomer().Clear();
+            this.Close();
+        }
+
+        private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
