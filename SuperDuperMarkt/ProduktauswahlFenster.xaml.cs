@@ -47,6 +47,14 @@ namespace SuperDuperMarkt
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            foreach (Kunde kunde in kunde.kundenList)
+            {
+                if (kunde.e_Mail.Equals(tbxKunde.Text))
+                {
+                    kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text));
+                }
+            }
+
             Warenkorb.Add(this.produkt);
         }
 
