@@ -24,10 +24,11 @@ namespace SuperDuperMarkt
             InitializeComponent();
             tbxKunde.Text = contentFromLastWindow;
         }
-        private List<Produkt> Warenkorb = new List<Produkt>();
+
         Produkt produkt = new Produkt();
         Kunde kunde = new Kunde();
         string Artikelnummer;
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -45,6 +46,11 @@ namespace SuperDuperMarkt
             }
         }
 
+        /// <summary>
+        /// Fügt das Produkt zum Warenkorb des entsprechenden Kunden hinzu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             foreach (Kunde kunde in kunde.kundenList)
@@ -54,8 +60,6 @@ namespace SuperDuperMarkt
                     kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text));
                 }
             }
-
-            Warenkorb.Add(this.produkt);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
