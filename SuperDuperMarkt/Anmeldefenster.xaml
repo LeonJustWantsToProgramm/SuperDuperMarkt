@@ -10,9 +10,9 @@
         <Label Content="Als Kunde anmelden" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="37,71,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label Content="Passwort:" HorizontalAlignment="Left" Margin="37,105,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Button x:Name="AnmeldeBtn" Content="Anmelden" HorizontalAlignment="Left" Margin="120,169,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontSize="14" Height="40" Width="104" Click="AnmeldeBtn_Click"/>
         <TextBox x:Name="AnmeldeEMailTBox" HorizontalAlignment="Left" Margin="130,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="14"/>
-        <TextBox x:Name="AnmeldePasswortTBox" HorizontalAlignment="Left" Margin="130,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="14"/>
+        <PasswordBox x:Name="AnmeldePasswortTBox" HorizontalAlignment="Left" Margin="130,109,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
+        <Button x:Name="AnmeldeBtn" Content="Anmelden" HorizontalAlignment="Left" Margin="120,169,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontSize="14" Height="40" Width="104" Click="AnmeldeBtn_Click"/>
 
     </Grid>
 </Window>

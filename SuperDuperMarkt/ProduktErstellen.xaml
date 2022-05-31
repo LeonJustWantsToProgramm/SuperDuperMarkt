@@ -11,12 +11,11 @@
         <Label Content="Name:" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top" Height="33" Width="75"/>
         <Label Content="Preis:" HorizontalAlignment="Left" Margin="15,80,0,0" VerticalAlignment="Top" Height="33" Width="86"/>
         <Label Content="Beschreibung:" HorizontalAlignment="Left" Margin="15,117,0,0" VerticalAlignment="Top" Height="33" Width="57"/>
-
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="116,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
-
+        <TextBox x:Name="PreisBox" HorizontalAlignment="Left" Margin="116,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
         <TextBox x:Name="BeschreibungBox" HorizontalAlignment="Left" Margin="116,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="80"/>
         <Button x:Name="BestätigenBtn" Content="Bestätigen" HorizontalAlignment="Left" Margin="147,234,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="85" Click="BestätigenBtn_Click"/>
-        <TextBox x:Name="PreisBox" HorizontalAlignment="Left" Margin="116,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        
 
     </Grid>
 </Window>

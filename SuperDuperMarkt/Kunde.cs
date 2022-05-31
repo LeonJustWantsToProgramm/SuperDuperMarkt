@@ -20,6 +20,8 @@ namespace SuperDuperMarkt
         public string passwort { get; set; }
         public string KundenID { get; set; }
 
+        public List<Produkt> warenkorb;
+
         public Kunde(string vorname, string nachname, int plz, string ort, string strasse, string hausNr, string e_Mail, string passwort)
         {
             this.vorname = vorname;
@@ -30,10 +32,25 @@ namespace SuperDuperMarkt
             this.hausNr = hausNr;
             this.e_Mail = e_Mail;
             this.passwort = passwort;
+            warenkorb = new List<Produkt>();
             addKunde(nachname, vorname, strasse, hausNr, Convert.ToString(plz), ort, e_Mail, passwort);
         }
 
         public Kunde() { }
+
+        /// <summary>
+        ///  fügt ein Produkt zum Warenkorb hinzu
+        /// </summary>
+        /// <param name="produkt"></param>
+        public void AddToWarenkorb(Produkt produkt)
+        {
+            warenkorb.Add(produkt);
+        }
+
+        public List<Produkt> GetWarenkorb()
+        {
+            return this.warenkorb;
+        }
 
         public async void addKunde(string Nachname, string Vorname, string Strasse, string Hausnummer, string PLZ, string Ort, string EMail, string Passwort)
         {

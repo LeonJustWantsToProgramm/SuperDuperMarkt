@@ -32,7 +32,7 @@ namespace SuperDuperMarkt
             string Email = AnmeldeEMailTBox.Text;
             await getKundePasswort(Email);
 
-            if (AnmeldeEMailTBox.Text.Equals(Email) && AnmeldePasswortTBox.Text.Equals(Kunden_Passwort))
+            if (AnmeldeEMailTBox.Text.Equals(Email) && AnmeldePasswortTBox.Password.Equals(Kunden_Passwort))
             {
                 ProduktauswahlFenster produktauswahlFenster = new ProduktauswahlFenster(AnmeldeEMailTBox.Text);
                 produktauswahlFenster.Show();
