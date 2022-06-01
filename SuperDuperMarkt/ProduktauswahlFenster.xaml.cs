@@ -30,6 +30,8 @@ namespace SuperDuperMarkt
             tbxKunde.Text = contentFromLastWindow;
         }
 
+        // Ruft den Artikel mit der eingegebenen Artikelnummer mit einem asynkronen SQL-Befehl ab und
+        // zeigt es an sobald die Informationen aus der Datenbank abgerufen wurden
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -47,11 +49,8 @@ namespace SuperDuperMarkt
             }
         }
 
-        /// <summary>
-        /// Fügt das ausgewählte Produkt zum Warenkorb des entsprechenden Kunden hinzu.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Geht durch alle Kunden in der Kundenliste durch und 
+        // Fügt das ausgewählte Produkt zum Warenkorb des aktuellen Kunden hinzu.
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             foreach (Kunde kunde in kunde.kundenList)
@@ -63,6 +62,7 @@ namespace SuperDuperMarkt
             }
         }
 
+        // Öffnet das Fenster "BestellInfoFenster", übergibt die E-Mail des aktuellen Kunden und schließt dieses Fenster
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             BestellInfoFenster bstIF = new BestellInfoFenster(tbxKunde.Text);

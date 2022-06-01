@@ -28,6 +28,8 @@ namespace SuperDuperMarkt
             BestellInfoContent.ItemsSource = GetWarenkorbOfCustomer();
         }
 
+        // Soll durch alle Kunden durchgehen und den Warenkorb (Liste der hinzugefügten Produkte)
+        // des aktuellen Kunden zurückgeben
         private List<Produkt> GetWarenkorbOfCustomer()
         {
             List<Produkt> result = new List<Produkt>();
@@ -42,11 +44,13 @@ namespace SuperDuperMarkt
             return result;
         }
 
+        // Verwirft die Bestellung und löscht damit den Warenkorb und schließt das Fenster
         private void VerwerfenBtn_Click(object sender, RoutedEventArgs e)
         {
             GetWarenkorbOfCustomer().Clear();
             this.Close();
         }
+
 
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {

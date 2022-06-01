@@ -25,21 +25,21 @@ namespace SuperDuperMarkt
             InitializeComponent();
         }
 
-
+        // Öffnet das Kundenerstellungsfenster
         private void KundenErstBtn_Click(object sender, RoutedEventArgs e)
         {
-            // CreateDatabaseConnection();
             KundenErstellen kundenErstellenObj = new KundenErstellen();
-            // this.Visibility = Visibility.Hidden;     // hides the current window
             kundenErstellenObj.Show();
         }
 
+        // Öffnet das Bestellungsfenster
         private void BestellungAufgBtn_Click(object sender, RoutedEventArgs e)
         {
             Anmeldefenster anmeldefenster = new Anmeldefenster();
             anmeldefenster.Show();
         }
 
+        // Öffnet das Produkterstellungsfenster
         private void ProduktErstellenBtn_Click(object sender, RoutedEventArgs e)
         {
             ProduktErstellen produktErstellenFenster = new ProduktErstellen();

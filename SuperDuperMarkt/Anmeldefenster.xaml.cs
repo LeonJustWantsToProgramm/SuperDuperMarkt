@@ -27,6 +27,7 @@ namespace SuperDuperMarkt
             InitializeComponent();
         }
 
+        // 
         private async void AnmeldeBtn_Click(object sender, RoutedEventArgs e)
         {
             string Email = AnmeldeEMailTBox.Text;
@@ -44,6 +45,7 @@ namespace SuperDuperMarkt
             }
         }
 
+        // 
         public async Task getKundePasswort(string Email)
         {
             var values = new Dictionary<string, string>

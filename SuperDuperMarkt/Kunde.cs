@@ -24,6 +24,7 @@ namespace SuperDuperMarkt
 
         public List<Produkt> warenkorb;
 
+        // Setzt alle Variablen den übergebenen Werten gleich, erstellt einen Warenkorb für den Kunden und fügt den Kunden zur Datenbank hinzu
         public Kunde(string vorname, string nachname, int plz, string ort, string strasse, string hausNr, string e_Mail, string passwort)
         {
             this.vorname = vorname;
@@ -42,10 +43,7 @@ namespace SuperDuperMarkt
         public Kunde() { }
 
 
-        /// <summary>
-        ///  fügt ein Produkt zum Warenkorb hinzu
-        /// </summary>
-        /// <param name="produkt"></param>
+        //  fügt ein Produkt zum Warenkorb hinzu
         public void AddToWarenkorb(Produkt produkt)
         {
             warenkorb.Add(produkt);
@@ -56,6 +54,7 @@ namespace SuperDuperMarkt
             return this.warenkorb;
         }
 
+        // Fügt den neuen Kunden der Datenbank hinzu
         public async void addKunde(string Nachname, string Vorname, string Strasse, string Hausnummer, string PLZ, string Ort, string EMail, string Passwort)
         {
             var values = new Dictionary<string, string>
@@ -73,6 +72,7 @@ namespace SuperDuperMarkt
             var response = await client.PostAsync("https://mysmartnutrition.de/v1/addKunde.php", content);
         }
 
+        // Ruft die Kundeninformationen mithilfe der E-Mail-Adresse aus der Datenbank ab
         public async void getKundenInformations(string Email)
         {
             var values = new Dictionary<string, string>
