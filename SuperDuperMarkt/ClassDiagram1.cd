@@ -1,36 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SuperDuperMarkt.App" Collapsed="true">
-    <Position X="10" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>App.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SuperDuperMarkt.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQACAAAAA=</HashCode>
-      <FileName>MainWindow.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="SuperDuperMarkt.Properties.Resources" Collapsed="true">
-    <Position X="10" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SuperDuperMarkt.Properties.Settings" Collapsed="true">
-    <Position X="10" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SuperDuperMarkt.Bestellung">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAAAIAAAAgAAAAAIAABAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAgAIAAAAgAAAAAIAABAAAABAAAAAA=</HashCode>
       <FileName>Bestellung.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -54,32 +27,32 @@
       <FileName>Produkt.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperDuperMarkt.Anmeldefenster" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="0.5" Width="1.5" />
+  <Class Name="SuperDuperMarkt.Anmeldefenster" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAEAA=</HashCode>
       <FileName>Anmeldefenster.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SuperDuperMarkt.KundenErstellen" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="1.5" Width="1.5" />
+  <Class Name="SuperDuperMarkt.KundenErstellen" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAA=</HashCode>
       <FileName>KundenErstellen.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SuperDuperMarkt.ProduktauswahlFenster" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+  <Class Name="SuperDuperMarkt.ProduktauswahlFenster" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgABAAAAAAAAAAEAAAAAIAACAAAACAAAAAA=</HashCode>
       <FileName>ProduktauswahlFenster.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SuperDuperMarkt.ProduktErstellen" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="2.5" Width="1.5" />
+  <Class Name="SuperDuperMarkt.ProduktErstellen" BaseTypeListCollapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProduktErstellen.xaml.cs</FileName>
