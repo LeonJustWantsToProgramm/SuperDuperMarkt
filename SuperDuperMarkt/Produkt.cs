@@ -16,7 +16,7 @@ namespace SuperDuperMarkt
         public string produktName { get; set; }
         public double preis { get; set; }
         public string produktBeschr { get; set; }
-
+        //Konstruktor für Produkt
         public Produkt(string produktName, double preis, string produktBeschr)
         {
             this.produktName = produktName;
@@ -24,13 +24,13 @@ namespace SuperDuperMarkt
             this.produktBeschr = produktBeschr;
             addProdukt(produktName, Convert.ToString(preis), produktBeschr);
         }
-
+        //Konstruktor für Produkt
         public Produkt()
         {
 
         }
 
-
+        //Produkt wird in die online Datenbank hinzugefügt
         public async void addProdukt(string Name, string Preis, string Beschreibung)
         {
             string preisS = Convert.ToString(Preis.Replace(",", "."));
@@ -44,6 +44,7 @@ namespace SuperDuperMarkt
             var response = await client.PostAsync("https://mysmartnutrition.de/v1/addProdukt.php", content);
         }
 
+        //Die höchste Produkt ID wird abgerufen
         public async void getLastProduktID()
         {
             var values = new Dictionary<string, string>
@@ -56,7 +57,7 @@ namespace SuperDuperMarkt
             string[] a = responseString.Split(':');
             int result = Convert.ToInt32(a[2].Replace("}", ""));
         }
-
+        //Alle Infroamtionen zum Produkt werden Abgerufen
         public async Task getProduktInformations(string P_ID)
         {
             var values = new Dictionary<string, string>
