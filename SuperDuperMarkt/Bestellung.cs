@@ -8,7 +8,7 @@ using System.Net.Http;
 
 namespace SuperDuperMarkt
 {
-    class Bestellung
+    public class Bestellung
     {
         private static readonly HttpClient client = new HttpClient();
         public double gesamtPreis { get; set; }

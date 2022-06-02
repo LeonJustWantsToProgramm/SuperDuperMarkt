@@ -28,6 +28,7 @@ namespace SuperDuperMarkt
         {
             InitializeComponent();
             tbxKunde.Text = contentFromLastWindow;
+            kunde.getKundenInformations(contentFromLastWindow);
         }
 
         // Ruft den Artikel mit der eingegebenen Artikelnummer mit einem asynkronen SQL-Befehl ab und
@@ -49,23 +50,16 @@ namespace SuperDuperMarkt
             }
         }
 
-        // Geht durch alle Kunden in der Kundenliste durch und 
         // Fügt das ausgewählte Produkt zum Warenkorb des aktuellen Kunden hinzu.
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            foreach (Kunde kunde in kunde.kundenList)
-            {
-                if (kunde.e_Mail.Equals(tbxKunde.Text))
-                {
-                    kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text));
-                }
-            }
+            kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text));
         }
 
-        // Öffnet das Fenster "BestellInfoFenster", übergibt die E-Mail des aktuellen Kunden und schließt dieses Fenster
+        // Öffnet das Fenster "BestellInfoFenster", übergibt den aktuellen Kunden und schließt dieses Fenster
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            BestellInfoFenster bstIF = new BestellInfoFenster(tbxKunde.Text);
+            BestellInfoFenster bstIF = new BestellInfoFenster(kunde);
             bstIF.Show();
             this.Close();
         }
