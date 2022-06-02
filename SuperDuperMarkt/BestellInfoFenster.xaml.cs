@@ -20,14 +20,25 @@ namespace SuperDuperMarkt
     public partial class BestellInfoFenster : Window
     {
         private Kunde kunde = new Kunde();
+        double gesamtpreis;
 
-        public BestellInfoFenster(string contentFromLastWindow)
+        public BestellInfoFenster(Kunde contentFromLastWindow)
         {
             InitializeComponent();
             kunde = contentFromLastWindow;
             BestellInfoContent.ItemsSource = kunde.warenkorb;
+            GesamtPreisLabel.Content = Convert.ToString(GetGesamtpreis() + " €");
         }
 
+        // gibt den Gesamtpreis für die Bestellung aus
+        public double GetGesamtpreis()
+        {
+            foreach (Produkt p in kunde.warenkorb)
+            {
+                gesamtpreis += p.preis;
+            }
+            return gesamtpreis;
+        }
 
         // Verwirft die Bestellung und löscht damit den Warenkorb und schließt das Fenster
         private void VerwerfenBtn_Click(object sender, RoutedEventArgs e)
@@ -36,7 +47,7 @@ namespace SuperDuperMarkt
             this.Close();
         }
 
-
+        // Gibt die Bestellung auf und schließt das Fenster
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
             Bestellung bestellung = new Bestellung(Convert.ToDouble(GesamtPreisLabel.Content), tbxKunde.Text, kunde.warenkorb);

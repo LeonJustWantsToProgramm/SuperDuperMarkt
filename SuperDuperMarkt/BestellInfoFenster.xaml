@@ -24,7 +24,7 @@
                             <TextBlock Text=", " />
                             <TextBlock Text="Preis: " />
                             <TextBlock Text="{Binding preis}" FontWeight="Bold" />
-                            <TextBlock Text=", " />
+                            <TextBlock Text=" €, " />
                             <TextBlock Text="Beschreibung: "/>
                             <TextBlock Text="{Binding produktBeschr}" FontWeight="Bold"/>
                         </WrapPanel>

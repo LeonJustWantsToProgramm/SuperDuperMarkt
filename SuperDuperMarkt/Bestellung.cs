@@ -13,7 +13,6 @@ namespace SuperDuperMarkt
         private static readonly HttpClient client = new HttpClient();
         public double gesamtPreis { get; set; }
         public string bestellDatum { get; set; }
-
         public string email { get; set; }
 
         Kunde kunde;
