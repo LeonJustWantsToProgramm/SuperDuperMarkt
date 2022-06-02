@@ -162,7 +162,7 @@
     <Resource Include="Bilder\ic_local_grocery_store_128_28460.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\vctmp6848_642356.angebot.c3a23bb3.png" />
+    <Resource Include="Bilder\angebot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,6 +15,7 @@ namespace SuperDuperMarkt
         public string bestellDatum { get; set; }
         
         private Kunde kunde;
+
         private List<Produkt> produktList;
 
 
@@ -32,6 +33,8 @@ namespace SuperDuperMarkt
             addBestellung(Convert.ToString(gesamtPreis), kunde.KundenID, produktIDs);
         }
 
+
+        // Fügt die Bestellung mit dem Gesamtpreis, der KundenID und ProduktIDs der Datenbank hinzu
         public async void addBestellung(string Gesamtpreis, string Customer_ID, string Produkte_ID)
         {
             var values = new Dictionary<string, string>

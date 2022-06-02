@@ -22,11 +22,13 @@ namespace SuperDuperMarkt
     {
         private static readonly HttpClient client = new HttpClient();
         string Kunden_Passwort;
+
         public Anmeldefenster()
         {
             InitializeComponent();
         }
 
+        // Prüft die eingegebene E-Mail-Adresse und das Passwort und leitet zum nächsten Fenster weiter
         private async void AnmeldeBtn_Click(object sender, RoutedEventArgs e)
         {
             string Email = AnmeldeEMailTBox.Text;
@@ -44,6 +46,8 @@ namespace SuperDuperMarkt
             }
         }
 
+        // holt das Kundenpasswort mithilfe der E-Mail des aktuellen Kunden aus der Datenbank und weist der Variable 
+        // "Kunden_Passwort" das Passwort zu
         public async Task getKundePasswort(string Email)
         {
             var values = new Dictionary<string, string>

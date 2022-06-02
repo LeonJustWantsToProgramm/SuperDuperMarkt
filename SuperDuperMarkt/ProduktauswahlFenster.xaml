@@ -20,7 +20,7 @@
         <TextBlock x:Name="tbxKunde" HorizontalAlignment="Left" Margin="444,13,0,0" TextWrapping="Wrap" Text="kunde@mail.de" VerticalAlignment="Top"/>
         <Label Content="Kunde" HorizontalAlignment="Left" Margin="395,8,0,0" VerticalAlignment="Top"/>
         <Button Content="Warenkorb aufrufen" HorizontalAlignment="Left" Margin="210,266,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_2"/>
-        <Image HorizontalAlignment="Left" Margin="359,81,0,0" Width="423" Source="Bilder/angebot.png" Height="247" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Margin="359,81,0,0" Width="423" Source="/Bilder/angebot.png" Height="247" VerticalAlignment="Top" Stretch="Uniform"/>
 
     </Grid>
 </Window>
