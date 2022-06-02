@@ -20,6 +20,7 @@ namespace SuperDuperMarkt
     public partial class BestellInfoFenster : Window
     {
         private Kunde kunde = new Kunde();
+        
 
         public BestellInfoFenster(string contentFromLastWindow)
         {
@@ -54,6 +55,7 @@ namespace SuperDuperMarkt
 
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
+            Bestellung bestellung = new Bestellung(Convert.ToDouble(GesamtPreisLabel.Content), tbxKunde.Text,  GetWarenkorbOfCustomer());
             MessageBox.Show("Ihre Bestellung wurde aufgegeben");
         }
     }
