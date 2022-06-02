@@ -38,7 +38,7 @@ namespace SuperDuperMarkt
 
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
-            Bestellung bestellung = new Bestellung(Convert.ToDouble(GesamtPreisLabel.Content), tbxKunde.Text,  GetWarenkorbOfCustomer());
+            Bestellung bestellung = new Bestellung(Convert.ToDouble(GesamtPreisLabel.Content), tbxKunde.Text, kunde.warenkorb);
             MessageBox.Show("Ihre Bestellung wurde aufgegeben");
         }
     }
