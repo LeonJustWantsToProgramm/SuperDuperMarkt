@@ -7,7 +7,7 @@ using System.Net.Http;
 
 namespace SuperDuperMarkt
 {
-    class Kunde
+    public class Kunde
     {
         private static readonly HttpClient client = new HttpClient();
         public string vorname { get; set; }
@@ -20,9 +20,8 @@ namespace SuperDuperMarkt
         public string passwort { get; set; }
         public string KundenID { get; set; }
 
-        public List<Kunde> kundenList = new List<Kunde>();
+        public List<Produkt> warenkorb = new List<Produkt>();
 
-        public List<Produkt> warenkorb;
 
         // Setzt alle Variablen den übergebenen Werten gleich, erstellt einen Warenkorb für den Kunden und fügt den Kunden zur Datenbank hinzu
         public Kunde(string vorname, string nachname, int plz, string ort, string strasse, string hausNr, string e_Mail, string passwort)
@@ -36,7 +35,6 @@ namespace SuperDuperMarkt
             this.e_Mail = e_Mail;
             this.passwort = passwort;
             warenkorb = new List<Produkt>();
-            kundenList.Add(this);
             addKunde(nachname, vorname, strasse, hausNr, Convert.ToString(plz), ort, e_Mail, passwort);
         }
 

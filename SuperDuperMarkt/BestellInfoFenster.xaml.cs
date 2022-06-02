@@ -19,35 +19,19 @@ namespace SuperDuperMarkt
     /// </summary>
     public partial class BestellInfoFenster : Window
     {
-        private Kunde kunde = new Kunde();
+        private Kunde kunde;
 
-        public BestellInfoFenster(string contentFromLastWindow)
+        public BestellInfoFenster(Kunde contentFromLastWindow)
         {
             InitializeComponent();
-            tbxKunde.Text = contentFromLastWindow;
-            BestellInfoContent.ItemsSource = GetWarenkorbOfCustomer();
-        }
-
-        // Soll durch alle Kunden durchgehen und den Warenkorb (Liste der hinzugefügten Produkte)
-        // des aktuellen Kunden zurückgeben
-        private List<Produkt> GetWarenkorbOfCustomer()
-        {
-            List<Produkt> result = new List<Produkt>();
-
-            foreach (Kunde kunde in kunde.kundenList)
-            {
-                if (kunde.e_Mail.Equals(tbxKunde.Text))
-                {
-                    result = kunde.warenkorb;
-                }
-            }
-            return result;
+            kunde = contentFromLastWindow;
+            BestellInfoContent.ItemsSource = kunde.warenkorb;
         }
 
         // Verwirft die Bestellung und löscht damit den Warenkorb und schließt das Fenster
         private void VerwerfenBtn_Click(object sender, RoutedEventArgs e)
         {
-            GetWarenkorbOfCustomer().Clear();
+            kunde.warenkorb.Clear();
             this.Close();
         }
 
