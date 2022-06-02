@@ -54,7 +54,7 @@ namespace SuperDuperMarkt
 
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Ihre Bestellung wurde aufgegeben");
         }
     }
 }
