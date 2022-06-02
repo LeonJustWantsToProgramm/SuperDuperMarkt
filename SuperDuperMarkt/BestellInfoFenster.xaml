@@ -14,7 +14,23 @@
         <Label x:Name="GesamtPreisLabel" Content="Hier später den Gesamtpreis einsetzen!" HorizontalAlignment="Left" Margin="125,371,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
         <TextBlock x:Name="tbxKunde" HorizontalAlignment="Left" Margin="699,23,0,0" TextWrapping="Wrap" Text="kunde@mail.de" VerticalAlignment="Top"/>
         <Label Content="Kunde" HorizontalAlignment="Left" Margin="650,18,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="BestellInfoContent" Margin="150,31,200,103" FontSize="14"/>
-
+        <Grid>
+            <ListView x:Name="BestellInfoContent" Margin="150,31,200,103" FontSize="14">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text="Name: " />
+                            <TextBlock Text="{Binding produktName}" FontWeight="Bold" />
+                            <TextBlock Text=", " />
+                            <TextBlock Text="Preis: " />
+                            <TextBlock Text="{Binding preis}" FontWeight="Bold" />
+                            <TextBlock Text=", " />
+                            <TextBlock Text="Beschreibung: "/>
+                            <TextBlock Text="{Binding produktBeschr}" FontWeight="Bold"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>

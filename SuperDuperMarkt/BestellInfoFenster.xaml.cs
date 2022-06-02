@@ -28,6 +28,7 @@ namespace SuperDuperMarkt
             BestellInfoContent.ItemsSource = kunde.warenkorb;
         }
 
+
         // Verwirft die Bestellung und löscht damit den Warenkorb und schließt das Fenster
         private void VerwerfenBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -39,6 +40,7 @@ namespace SuperDuperMarkt
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Ihre Bestellung wurde aufgegeben");
+            this.Close();
         }
     }
 }

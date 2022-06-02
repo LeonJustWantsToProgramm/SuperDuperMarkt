@@ -41,17 +41,6 @@ namespace SuperDuperMarkt
         public Kunde() { }
 
 
-        //  fügt ein Produkt zum Warenkorb hinzu
-        public void AddToWarenkorb(Produkt produkt)
-        {
-            warenkorb.Add(produkt);
-        }
-
-        public List<Produkt> GetWarenkorb()
-        {
-            return this.warenkorb;
-        }
-
         // Fügt den neuen Kunden der Datenbank hinzu
         public async void addKunde(string Nachname, string Vorname, string Strasse, string Hausnummer, string PLZ, string Ort, string EMail, string Passwort)
         {
