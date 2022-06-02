@@ -53,7 +53,7 @@ namespace SuperDuperMarkt
         // Fügt das ausgewählte Produkt zum Warenkorb des aktuellen Kunden hinzu.
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text, Artikelnummer));
+            kunde.warenkorb.Add(new Produkt(P_Name.Text, Convert.ToDouble(P_Preis.Text), P_Beschreibung.Text));
             MessageBox.Show("Ihr Produkt wurde zum Warenkorb hinzugefügt");
         }
 

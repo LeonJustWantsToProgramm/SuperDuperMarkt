@@ -19,12 +19,11 @@ namespace SuperDuperMarkt
 
 
         // Setzt alle Variablen den übergebenen Werten gleich, erstellt fügt das Produkt zur Datenbank hinzu
-        public Produkt(string produktName, double preis, string produktBeschr, string produktID)
+        public Produkt(string produktName, double preis, string produktBeschr)
         {
             this.produktName = produktName;
             this.preis = preis;
             this.produktBeschr = produktBeschr;
-            this.produktID = produktID;
             addProdukt(produktName, Convert.ToString(preis), produktBeschr);
         }
 

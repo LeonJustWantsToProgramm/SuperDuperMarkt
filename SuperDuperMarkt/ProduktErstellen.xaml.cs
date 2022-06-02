@@ -25,6 +25,8 @@ namespace SuperDuperMarkt
         }
         double preis;
         Produkt produkt;
+        int produktID = 13;
+
         private void BestätigenBtn_Click(object sender, RoutedEventArgs e)
         {
             try

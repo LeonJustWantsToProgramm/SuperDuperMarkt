@@ -15,7 +15,7 @@
         <TextBox x:Name="PreisBox" HorizontalAlignment="Left" Margin="116,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
         <TextBox x:Name="BeschreibungBox" HorizontalAlignment="Left" Margin="116,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="80"/>
         <Button x:Name="BestätigenBtn" Content="Bestätigen" HorizontalAlignment="Left" Margin="147,234,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="85" Click="BestätigenBtn_Click"/>
-        
+
 
     </Grid>
 </Window>

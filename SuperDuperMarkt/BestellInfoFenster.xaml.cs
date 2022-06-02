@@ -50,7 +50,7 @@ namespace SuperDuperMarkt
         // Gibt die Bestellung auf und schließt das Fenster
         private void BestellungAufgebenBtn_Click(object sender, RoutedEventArgs e)
         {
-            Bestellung bestellung = new Bestellung(Convert.ToDouble(GesamtPreisLabel.Content), tbxKunde.Text, kunde.warenkorb);
+            Bestellung bestellung = new Bestellung(Convert.ToDouble(GetGesamtpreis()), tbxKunde.Text, kunde.warenkorb);
             MessageBox.Show("Ihre Bestellung wurde aufgegeben");
             this.Close();
         }
